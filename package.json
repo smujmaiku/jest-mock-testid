@@ -1,0 +1,69 @@
+{
+  "name": "jest-mock-testid",
+  "version": "0.1.0",
+  "description": "Mock Component Props and data-testid",
+  "main": "build/mock-testids.js",
+  "types": "build/mock-testids.d.ts",
+  "directories": {
+    "build": "build"
+  },
+  "scripts": {
+    "start": "npm run storybook",
+    "prebuild": "rimraf ./build",
+    "build": "tsc",
+    "postbuild": "node ./postbuild",
+    "lint": "eslint . --ext .ts,.tsx",
+    "test": "jest --watch",
+    "test:ci": "jest",
+    "test:coverage": "jest --coverage",
+    "storybook": "start-storybook -p 6006",
+    "predeploy-storybook": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smujmaiku/jest-mock-testid.git"
+  },
+  "author": "Michael Szmadzinski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smujmaiku/jest-mock-testid/issues"
+  },
+  "homepage": "https://smujmaiku.github.io/jest-mock-testid/",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-interactions": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/builder-webpack4": "^6.5.12",
+    "@storybook/manager-webpack4": "^6.5.12",
+    "@storybook/react": "^6.5.12",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/jest": "^27.4.0",
+    "@types/react": "^17.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
+    "@typescript-eslint/parser": "^5.10.2",
+    "babel-loader": "^8.2.5",
+    "eslint": "^8.8.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "gh-pages": "^4.0.0",
+    "jest": "^27.4.7",
+    "jest-expect-json": "^0.1.1",
+    "jest-mock": "^27.5.1",
+    "prettier": "^2.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.5.5"
+  }
+}

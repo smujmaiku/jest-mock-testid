@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"module": "esnext",
+		"target": "es2020",
+		"lib": ["es2020", "dom"],
+		"jsx": "preserve",
+		"moduleResolution": "node",
+		"strict": true,
+		"declaration": true,
+		"outDir": "./build"
+	},
+	"include": [
+		"./src"
+	],
+	"exclude": [
+		"node_modules",
+		"coverage",
+		"build",
+		"src/test",
+		"**/*.stories.*",
+		"**/*.test.*"
+	]
+}
