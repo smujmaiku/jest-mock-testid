@@ -1,0 +1,4 @@
+{
+	"main": "./mock-testids.js",
+	"types": "./mock-testids.d.ts"
+}
